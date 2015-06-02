@@ -96,9 +96,9 @@ void Tracker::logic()
     }
 
     const double off[] = {
-        s.camera_yaw,
-        s.camera_pitch,
-        s.camera_roll
+        static_cast<double>(s.camera_yaw),
+        static_cast<double>(s.camera_pitch),
+        static_cast<double>(s.camera_roll)
     };
     const rmat cam = rmat::euler_to_rmat(off);
     rmat r = rmat::euler_to_rmat(&value[Yaw]);

@@ -1,5 +1,6 @@
 #pragma once
 #include <initializer_list>
+#include <cmath>
 
 template<typename num, int h, int w>
 struct Mat

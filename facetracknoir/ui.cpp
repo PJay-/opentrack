@@ -499,11 +499,13 @@ void MainWindow::maybe_start_profile_from_executable()
             startTracker();
         }
     }
+    #ifdef _WIN32
     else
     {
         if (det.should_stop())
             stopTracker();
     }
+    #endif
 }
 
 void MainWindow::set_profile(const QString &profile)
